@@ -94,6 +94,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="btn_copiar:" target="XfG-lQ-9wD" id="ZR3-mQ-Ny7"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-2T-EU2">
                                 <rect key="frame" x="18" y="316" width="97" height="25"/>
@@ -255,6 +258,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="btn_actualizar:" target="XfG-lQ-9wD" id="uoy-9j-YWv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -292,6 +298,15 @@
                             <constraint firstItem="KJc-aA-jpd" firstAttribute="top" secondItem="rGM-Be-49a" secondAttribute="bottom" constant="50" id="yQm-tV-XuM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbl_contacto" destination="WT2-a5-bFA" id="EgI-eH-lnY"/>
+                        <outlet property="lbl_correos" destination="rGM-Be-49a" id="37H-ec-y61"/>
+                        <outlet property="lbl_galeria" destination="5Td-Yx-FeE" id="nSW-Fs-YuP"/>
+                        <outlet property="lbl_inicio" destination="cjx-cl-HPw" id="sFW-zR-joc"/>
+                        <outlet property="lbl_mapa" destination="2c5-Vi-j69" id="U5y-yb-PHr"/>
+                        <outlet property="lbl_paquetes" destination="0h6-Eo-KyX" id="bvb-CV-HWj"/>
+                        <outlet property="lbl_servicios" destination="AQn-ik-ID1" id="eFP-Mu-Nxn"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
