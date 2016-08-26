@@ -17,6 +17,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var lbl_mapa: NSTextField!
     @IBOutlet weak var lbl_contacto: NSTextField!
     @IBOutlet weak var lbl_correos: NSTextField!
+    @IBOutlet weak var lbl_actualizado: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,16 @@ class ViewController: NSViewController {
     }
     
     func obtenerParams() {
+        NSTimer.scheduledTimerWithTimeInterval(60*10, target: self, selector: #selector(ViewController.obtenerParams) , userInfo: nil, repeats: true)
+        let todaysDate:NSDate = NSDate()
+        let dateFormatter:NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd/MM/yyyy "
+        let DateInFormat:String = dateFormatter.stringFromDate(todaysDate)
+        lbl_actualizado.stringValue = String(DateInFormat)
     }
     
     @IBAction func btn_actualizar(sender: AnyObject) {
+        obtenerParams()
     }
     
     @IBAction func btn_copiar(sender: AnyObject) {

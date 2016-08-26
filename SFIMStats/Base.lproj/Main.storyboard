@@ -262,6 +262,25 @@
                                     <action selector="btn_actualizar:" target="XfG-lQ-9wD" id="uoy-9j-YWv"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XKp-gt-lvX">
+                                <rect key="frame" x="355" y="136" width="117" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="LZO-aE-PJC"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Actualizado" id="ITD-k7-CzV">
+                                    <font key="font" size="20" name="Helvetica-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-qf-8hO">
+                                <rect key="frame" x="329" y="101" width="143" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="### _" id="SUf-YK-cYK">
+                                    <font key="font" size="20" name="Helvetica-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="5Td-Yx-FeE" firstAttribute="top" secondItem="33C-Nn-RrV" secondAttribute="bottom" constant="10" id="19M-ZV-blD"/>
@@ -281,6 +300,7 @@
                             <constraint firstItem="VcW-Yh-aJU" firstAttribute="top" secondItem="KJc-aA-jpd" secondAttribute="top" id="QyY-Dq-3av"/>
                             <constraint firstItem="LXm-w2-bWf" firstAttribute="top" secondItem="33C-Nn-RrV" secondAttribute="top" id="SUM-9q-ptc"/>
                             <constraint firstItem="2c5-Vi-j69" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TH8-Pu-Y1Z"/>
+                            <constraint firstItem="WZA-qf-8hO" firstAttribute="top" secondItem="XKp-gt-lvX" secondAttribute="bottom" constant="10" id="UZg-aH-HPE"/>
                             <constraint firstItem="JPm-tH-ENL" firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" id="Uix-Gc-EOE"/>
                             <constraint firstItem="WT2-a5-bFA" firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" id="WSk-lO-ZTa"/>
                             <constraint firstItem="0h6-Eo-KyX" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="X6B-Om-43L"/>
@@ -288,10 +308,14 @@
                             <constraint firstItem="AQn-ik-ID1" firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" id="cei-fq-BJ6"/>
                             <constraint firstItem="cjx-cl-HPw" firstAttribute="leading" secondItem="SfX-2T-EU2" secondAttribute="leading" id="cuc-fE-MdY"/>
                             <constraint firstItem="5Td-Yx-FeE" firstAttribute="leading" secondItem="SfX-2T-EU2" secondAttribute="leading" id="gWq-QZ-Pcg"/>
+                            <constraint firstItem="WZA-qf-8hO" firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" id="knL-He-ODT"/>
+                            <constraint firstItem="WZA-qf-8hO" firstAttribute="top" secondItem="rGM-Be-49a" secondAttribute="top" id="o5D-rx-4oF"/>
                             <constraint firstItem="WT2-a5-bFA" firstAttribute="top" secondItem="5Td-Yx-FeE" secondAttribute="top" id="oiv-Si-vad"/>
                             <constraint firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" constant="10" id="oyN-IG-lkS"/>
                             <constraint firstItem="33C-Nn-RrV" firstAttribute="top" secondItem="cjx-cl-HPw" secondAttribute="bottom" constant="30" id="qDG-Gy-Tuf"/>
+                            <constraint firstItem="XKp-gt-lvX" firstAttribute="top" secondItem="MVb-pG-3rG" secondAttribute="top" id="r2R-BX-bvA"/>
                             <constraint firstItem="KJc-aA-jpd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="25" id="rN4-4B-ujh"/>
+                            <constraint firstItem="XKp-gt-lvX" firstAttribute="trailing" secondItem="6rl-Dh-scA" secondAttribute="trailing" id="seM-hc-6dg"/>
                             <constraint firstItem="2c5-Vi-j69" firstAttribute="top" secondItem="5Td-Yx-FeE" secondAttribute="top" id="tfj-Zp-UtL"/>
                             <constraint firstItem="SfX-2T-EU2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="uH8-5F-DdO"/>
                             <constraint firstItem="va2-H2-O1M" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="uuh-y5-pEF"/>
@@ -299,6 +323,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lbl_actualizado" destination="WZA-qf-8hO" id="ZKl-NF-GfL"/>
                         <outlet property="lbl_contacto" destination="WT2-a5-bFA" id="EgI-eH-lnY"/>
                         <outlet property="lbl_correos" destination="rGM-Be-49a" id="37H-ec-y61"/>
                         <outlet property="lbl_galeria" destination="5Td-Yx-FeE" id="nSW-Fs-YuP"/>
