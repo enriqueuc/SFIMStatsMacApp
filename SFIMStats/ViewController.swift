@@ -56,6 +56,10 @@ class ViewController: NSViewController {
     }
     
     @IBAction func btn_copiar(sender: AnyObject) {
+        let stringToCopy = "Inicio: \(lbl_inicio.stringValue), Paquetes: \(lbl_paquetes.stringValue), Servicios \(lbl_servicios.stringValue), Galería: \(lbl_galeria.stringValue), Mapa: \(lbl_mapa.stringValue), Contacto: \(lbl_contacto.stringValue), Correos: \(lbl_correos.stringValue)."
+        let pasteboard = NSPasteboard.generalPasteboard()
+        pasteboard.clearContents()
+        pasteboard.setString(stringToCopy, forType: NSPasteboardTypeString)
     }
 
 }
