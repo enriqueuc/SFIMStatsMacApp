@@ -49,6 +49,28 @@ class ViewController: NSViewController {
         dateFormatter.dateFormat = "HH:mm dd/MM/yyyy "
         let DateInFormat:String = dateFormatter.stringFromDate(todaysDate)
         lbl_actualizado.stringValue = String(DateInFormat)
+        
+        if let url = NSURL(string: "") {
+            let datos : NSData = NSData(contentsOfURL: url)!
+            do {
+                let contents = try NSJSONSerialization.JSONObjectWithData(datos, options: NSJSONReadingOptions.MutableLeaves)
+                let dico1 = contents as! NSDictionary
+                let dico2Stats = dico1["stats"]! as! NSArray
+                let el0Dico2 = dico2Stats[0] as! NSDictionary
+                lbl_inicio.stringValue = el0Dico2["inicio"] as! NSString as String
+                lbl_paquetes.stringValue = el0Dico2["paquetes"] as! NSString as String
+                lbl_servicios.stringValue = el0Dico2["servicios"] as! NSString as String
+                lbl_galeria.stringValue = el0Dico2["galeria"] as! NSString as String
+                lbl_mapa.stringValue = el0Dico2["mapa"] as! NSString as String
+                lbl_contacto.stringValue = el0Dico2["contacto"] as! NSString as String
+                lbl_correos.stringValue = el0Dico2["correos"] as! NSString as String
+                print(contents)
+            } catch {
+                // contents could not be loaded
+            }
+        } else {
+            print("Bad URL!")
+        }
     }
     
     @IBAction func btn_actualizar(sender: AnyObject) {

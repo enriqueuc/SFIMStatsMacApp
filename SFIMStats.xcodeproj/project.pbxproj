@@ -275,6 +275,7 @@
 				CDE792141D6FB0AF006D8ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
