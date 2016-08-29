@@ -1,0 +1,2 @@
+Add the name of the window at the viewDidAppear() method
+  self.view.window!.title = ""
